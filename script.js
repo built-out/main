@@ -1,5 +1,4 @@
 var files = [];
-
 function listFiles() {
   var directory = document.getElementById("directory");
   var files = directory.files;
@@ -11,7 +10,6 @@ function listFiles() {
     filesList.appendChild(li);
   }
 }
-
 function uploadFile() {
   var file = document.getElementById("file").files[0];
 
@@ -24,10 +22,9 @@ function uploadFile() {
       alert("File upload failed!");
     }
   };
-
   var formData = new FormData();
   formData.append("file", file);
   xhr.send(formData);
 }
-
 window.onload = listFiles;
+}
